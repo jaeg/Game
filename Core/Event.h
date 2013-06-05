@@ -51,35 +51,5 @@ enum EventType
    void* data;
  };
 
- //Data for the animation event
-class CAnimationData
-{
-    CAnimationData(int start,int end)
-    {
-        startFrame=start;
-        endFrame=end;
-    }
-    int startFrame;
-    int endFrame;
-
-};
-//Data for a collision event.  Provides the two nodes that collided.
-class CCollisionData
-{
-    CCollisionData(IAnimatedMeshSceneNode* tnode1,IAnimatedMeshSceneNode* tnode2)
-    {
-        node1=tnode1;
-        node2=tnode2;
-    }
-    IAnimatedMeshSceneNode* node1;
-    IAnimatedMeshSceneNode* node2;
-};
-class CSimpleCollisionData
-{
-    CSimpleCollisionData(int tid)
-    {
-        id=tid;
-    }
-    int id;
-};
+ 
 #endif
